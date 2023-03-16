@@ -17,7 +17,7 @@ const Dice = ({ value }) => {
     return <div>Incorrect dice value</div>;
 
   return (
-    <div className="grid h-40 w-40 grid-cols-3 grid-rows-3 place-items-center rounded-xl border-2 border-stone-700 p-4">
+    <div className="grid h-40 w-40 grid-cols-3 grid-rows-3 place-items-center rounded-xl border-4 border-stone-700 p-4">
       {Array(9)
         .fill(0)
         .map((_, index) =>
