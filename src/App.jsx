@@ -1,19 +1,17 @@
 import { useState } from "react";
+import DiceRolls from "./components/DiceRoll/DiceRolls";
 import HistoryList from "./components/HistoryList/HistoryList";
-import Roller from "./components/Roller/Roller";
-
-import getValue from "./utils/getRandomDiceValue";
+import RollController from "./components/RollController/RollController";
 
 function App() {
-  const [rolls, setRolls] = useState([[getValue()]]);
-
   return (
-    <div className="flex h-screen w-full justify-between gap-10 bg-stone-300">
-      <Roller
-        value={rolls[0]}
-        rollDice={() => setRolls((current) => [[getValue()], ...current])}
-      />
-      <HistoryList history={rolls} />
+    <div className="flex h-screen w-full flex-col justify-between gap-10 bg-stone-300">
+      <div className="h-1/2 w-full">
+        <DiceRolls />
+        <RollController />
+      </div>
+
+      <HistoryList />
     </div>
   );
 }

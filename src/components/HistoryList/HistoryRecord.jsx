@@ -4,7 +4,13 @@ import Dice from "../Dice/Dice";
 const HistoryRecord = ({ value }) => {
   return (
     <div>
-      <Dice value={value} />
+      {value.map((dice, i) => (
+        <Dice
+          key={i}
+          value={dice}
+          diceSize={1}
+        />
+      ))}
     </div>
   );
 };

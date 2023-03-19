@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import { useContext } from "react";
+import DiceContext from "../../context/DiceContext";
 import HistoryRecord from "./HistoryRecord";
 
-const HistoryList = ({ history }) => {
-  const [historyRecords, setHistoryRecords] = useState([]);
+const HistoryList = () => {
+  const { rolls } = useContext(DiceContext);
 
   return (
-    <div className="flex h-full w-1/4 flex-col gap-4 border-l-4 border-slate-700 bg-slate-400 p-4">
-      {history.map((record) => (
+    <div className="flex h-1/2 w-full flex-col gap-4 border-t-4 border-slate-700 bg-slate-400 p-4">
+      {rolls.map((record) => (
         <HistoryRecord
-          value={record[0]}
+          value={record}
           key={Math.random()}
         />
       ))}
