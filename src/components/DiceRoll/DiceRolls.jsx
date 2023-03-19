@@ -6,7 +6,7 @@ const DiceRolls = () => {
   const { rolls } = useContext(DiceContext);
 
   return (
-    <div className="flex w-full items-center justify-center gap-10">
+    <div className="flex w-min gap-8 rounded-2xl bg-slate-200 p-4 shadow-xl">
       {rolls[0].map((dice, i) => (
         <Dice
           key={i}

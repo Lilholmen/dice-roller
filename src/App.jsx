@@ -5,8 +5,8 @@ import RollController from "./components/RollController/RollController";
 
 function App() {
   return (
-    <div className="flex h-screen w-full flex-col justify-between gap-10 bg-stone-300">
-      <div className="h-1/2 w-full">
+    <div className="flex min-h-screen w-full flex-col gap-4 bg-stone-300 p-8">
+      <div className="flex w-full flex-col items-center gap-6">
         <DiceRolls />
         <RollController />
       </div>

@@ -22,7 +22,13 @@ const DiceContextProvider = ({ children }) => {
 
   return (
     <DiceContext.Provider
-      value={{ rolls, rollDice: roll, increaseDiceAmount, decreaseDiceAmount }}
+      value={{
+        rolls,
+        rollDice: roll,
+        increaseDiceAmount,
+        decreaseDiceAmount,
+        diceAmount,
+      }}
     >
       {children}
     </DiceContext.Provider>

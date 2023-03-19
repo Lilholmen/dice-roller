@@ -6,7 +6,7 @@ const HistoryList = () => {
   const { rolls } = useContext(DiceContext);
 
   return (
-    <div className="flex h-1/2 w-full flex-col gap-4 border-t-4 border-slate-700 bg-slate-400 p-4">
+    <div className="flex w-full flex-col flex-wrap gap-4 rounded-3xl bg-slate-400 p-6">
       {rolls.map((record) => (
         <HistoryRecord
           value={record}

@@ -1,18 +1,16 @@
 import React, { useContext } from "react";
 import DiceContext from "../../context/DiceContext";
+import ControlButton from "./ControlButton";
 
 const RollController = () => {
-  const { rollDice } = useContext(DiceContext);
+  const { rollDice, increaseDiceAmount, decreaseDiceAmount, diceAmount } =
+    useContext(DiceContext);
 
   return (
-    <div>
-      <button
-        className="rounded-xl border-4 border-emerald-800 bg-emerald-500 text-3xl hover:border-emerald-300 hover:bg-emerald-700"
-        onClick={rollDice}
-        type="button"
-      >
-        Roll
-      </button>
+    <div className="flex items-center gap-16 text-5xl">
+      <ControlButton action={rollDice}>Roll</ControlButton>x{diceAmount}
+      <ControlButton action={increaseDiceAmount}>+</ControlButton>
+      <ControlButton action={decreaseDiceAmount}>-</ControlButton>
     </div>
   );
 };

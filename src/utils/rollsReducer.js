@@ -2,7 +2,7 @@ const getRandomDiceArray = (diceAmount) => {
   const diceArray = [];
 
   for (let i = 0; i < diceAmount; i++) {
-    diceArray.push(Math.round(Math.random() * 5 + 1));
+    diceArray.push(Math.floor(Math.random() * 6 + 1));
   }
 
   return diceArray;

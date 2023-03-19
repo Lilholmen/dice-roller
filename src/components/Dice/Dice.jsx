@@ -3,7 +3,7 @@ import DiceFace from "./DiceFace";
 const DiceContainer = ({ diceSize, children }) => {
   if (diceSize === 4)
     return (
-      <div className="h-40 w-40 rounded-xl border-4 border-stone-700 p-4">
+      <div className="h-40 w-40 rounded-3xl border-4 border-stone-700 p-4">
         {children}
       </div>
     );
